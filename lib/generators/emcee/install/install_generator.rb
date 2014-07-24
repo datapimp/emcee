@@ -49,10 +49,8 @@ module Emcee
       end
 
       def layout_file
-        @layout_file ||= begin
-                           file = Pathname(Dir[Rails.root.join("app","views","layouts","application*")].first)
-                           file.relative_path_from(Rails.root).to_s
-                         end
+         file = Pathname(Dir[Rails.root.join("app","views","layouts","application*")].first)
+         file.relative_path_from(Rails.root).to_s
       end
 
     end
